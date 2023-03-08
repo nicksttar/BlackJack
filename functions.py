@@ -64,3 +64,25 @@ def results(user_cash: str, enemy_cash: str, bet: int) -> int:
         return -bet
     elif user_cash == enemy_cash:
         return 0
+    elif user_cash > 21 and enemy_cash > 21:
+        return 0
+    
+
+def show_scores():
+    user_input = validator("Show scores? y/n: ")
+    if user_input == "y":
+        return dashboard("dashboard.txt")
+
+def show_cards(your_c, enemy_c, result="one"):
+        for card_u in your_c:
+            print(card_u, end=" ")
+        print("\n")
+        for card_e in enemy_c:
+            print(card_e, end=" ")
+        print("\n")
+
+        if result=="one":
+            return card_e
+        elif result=="two":
+            return [card_u, card_e]
+        

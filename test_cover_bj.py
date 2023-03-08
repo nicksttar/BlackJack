@@ -1,5 +1,5 @@
 import unittest
-from black_jack_oop import Deck, User
+from bj_class import Deck, User
 
 class UnitTest(unittest.TestCase):
     """Tests of working class Deck"""
